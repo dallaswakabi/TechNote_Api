@@ -60,7 +60,7 @@ app.use(errorHandling);
 
 app.listen(PORT,async()=>{
        try {
-        const dbconnect = await mongoose.connect('mongodb+srv://dallaswakabi:dallas12@technote.cnntyjq.mongodb.net/?retryWrites=true&w=majority',
+        const dbconnect = await mongoose.connect(process.env.DB_URL,
         {useNewUrlParser:true},
         { useUnifiedTopology: true },
         {useFindAndModify:false},
